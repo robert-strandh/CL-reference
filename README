@@ -1,0 +1,25 @@
+This project is an attempt at writing a reference manual for the
+Common Lisp programming language. 
+
+It differs from the Common Lisp HyperSpec in the following ways:
+
+  * It describes the language features in a more elaborate way,
+    including more examples and more explicit information about
+    exceptional, undefined, and unspecified behavior. 
+
+  * The contents is in the public domain (in places where such a
+    status is possible), which means that it uses a different
+    structure and different phrases compared to the HyperSpec. 
+
+  * It has more cross references, annotations, and remarks. 
+
+  * It has a better index. 
+
+We are using LaTeX in order for the printed result to be as nice as
+possible.  At the same time, we attempt to use a limited number of
+semantic macros so that the source can be parsed and turned into a
+variety of formats, e.g., HTML.
+
+The only way this reference manual is ever going to be finished is if
+many different people help out.  In that respect, it can be viewed as
+an experiment to see whether such collaboration is possible. 
