@@ -1,0 +1,25 @@
+\chapter{The concept of a list}
+\label{chap-list-concept}
+
+In \cl{}, the word \emph{list} is used very broadly as a structure
+made up of \texttt{cons} cells.%
+\footnote{The name \texttt{cons} is also the name of the function for
+  creating \texttt{cons} cells, and it is an abbreviation of the word
+  \emph{construct.}}  A \texttt{cons} cell can be thought of as an
+object consisting of two \emph{fields} called the \texttt{car} field
+and the \texttt{cdr} field respectively.%
+\footnote{The names \texttt{car} and \texttt{cdr} come from the
+  machine instructions on one of the first computers on which \lisp{}
+  was implemented.  These instructions would return the \emph{contents
+    of the address part of the register} and the \emph{contents of the
+    decrement part of the register} respectively.}
+\refFig{fig-cons-cell} illustrates a \texttt{cons} cell.
+
+\begin{figure}
+\begin{center}
+\inputfig{fig-cons-cell.pdf_t}
+\end{center}
+\caption{\label{fig-cons-cell}
+Representation of a \texttt{cons} cell.}
+\end{figure}
+
