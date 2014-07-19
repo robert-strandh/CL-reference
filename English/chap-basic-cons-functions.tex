@@ -16,7 +16,9 @@ given, then this function returns the symbol \texttt{nil}.  If a
 of the \texttt{car} field of the \texttt{cons} cell.
 
 If an argument other than the symbol \texttt{nil} or a \texttt{cons}
-cell is given, then an error of type \texttt{type-error} is signaled. 
+cell is given and the code is \emph{safe}, then an error of type
+\texttt{type-error} is signaled.  If the code is not safe, an error
+may or may not be signaled. 
 
 \Defun {cdr} {cons}
 
@@ -27,7 +29,9 @@ given, then this function returns the symbol \texttt{nil}.  If a
 of the \texttt{cdr} field of the \texttt{cons} cell.
 
 If an argument other than the symbol \texttt{nil} or a \texttt{cons}
-cell is given, then an error of type \texttt{type-error} is signaled. 
+cell is given and the code is \emph{safe}, then an error of type
+\texttt{type-error} is signaled.  If the code is not safe, an error
+may or may not be signaled.
 
 \Defun {first} {cons}
 
