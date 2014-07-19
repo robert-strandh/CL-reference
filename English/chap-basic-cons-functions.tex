@@ -6,3 +6,35 @@
 This function takes two arbitrary \lisp{} objects and returns a
 \texttt{cons} cell with those objects in the \texttt{car} field and
 the \texttt{cdr} field respectively.
+
+\Defun {car} {cons}
+
+This function takes either the symbol \texttt{nil} \emph{or} a
+\texttt{cons} cell as an argument.  If the symbol \texttt{nil} is
+given, then this function returns the symbol \texttt{nil}.  If a
+\texttt{cons} cell is given, then this function returns the contents
+of the \texttt{car} field of the \texttt{cons} cell.
+
+If an argument other than the symbol \texttt{nil} or a \texttt{cons}
+cell is given, then an error of type \texttt{type-error} is signaled. 
+
+\Defun {cdr} {cons}
+
+This function takes either the symbol \texttt{nil} \emph{or} a
+\texttt{cons} cell as an argument.  If the symbol \texttt{nil} is
+given, then this function returns the symbol \texttt{nil}.  If a
+\texttt{cons} cell is given, then this function returns the contents
+of the \texttt{cdr} field of the \texttt{cons} cell.
+
+If an argument other than the symbol \texttt{nil} or a \texttt{cons}
+cell is given, then an error of type \texttt{type-error} is signaled. 
+
+\Defun {first} {cons}
+
+This function is entirely equivalent to the function \texttt{car}.
+
+\Defun {rest} {cons}
+
+This function is entirely equivalent to the function \texttt{cdr}.
+
+%%  LocalWords:  cdr
