@@ -23,3 +23,22 @@ and the \texttt{cdr} field respectively.%
 Representation of a \texttt{cons} cell.}
 \end{figure}
 
+More specifically, a \emph{list} is a sequence of \texttt{cons} cells,
+linked by their \texttt{cdr} fields.  What is contained in the
+\texttt{car} field is of no importance for the list itself.
+
+\cl{} distinguishes between three basic types of lists:
+
+\begin{itemize}
+\item \emph{Proper} lists.  A list is a proper list when the last
+  \texttt{cons} cell in the sequence contains the symbol \texttt{nil}
+  in its \texttt{cdr} field. 
+\item \emph{Dotted} lists.  A list is a dotted list when the last
+  \texttt{cons} cell in the sequence contains an \emph{atom}
+  in its \texttt{cdr} field.  An atom is any \cl{} object other than a
+  \texttt{cons} cell.
+\item \emph{Circular} lists.  A list is a circular list when the
+  \texttt{cdr} field of some \texttt{cons} cell in the sequence
+  contains a reference to a \texttt{cons} cell that precedes it in the
+  sequence. 
+\end{itemize}
