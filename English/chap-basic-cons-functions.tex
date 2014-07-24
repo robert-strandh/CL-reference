@@ -7,7 +7,7 @@ This function takes two arbitrary \lisp{} objects and returns a
 \texttt{cons} cell with those objects in the \texttt{car} field and
 the \texttt{cdr} field respectively.
 
-\Defun {car} {cons}
+\Defun {car} {list}
 
 This function takes either the symbol \texttt{nil} \emph{or} a
 \texttt{cons} cell as an argument.  If the symbol \texttt{nil} is
@@ -20,7 +20,7 @@ cell is given and the code is \emph{safe}, then an error of type
 \texttt{type-error} is signaled.  If the code is not safe, an error
 may or may not be signaled. 
 
-\Defun {cdr} {cons}
+\Defun {cdr} {list}
 
 This function takes either the symbol \texttt{nil} \emph{or} a
 \texttt{cons} cell as an argument.  If the symbol \texttt{nil} is
@@ -33,11 +33,11 @@ cell is given and the code is \emph{safe}, then an error of type
 \texttt{type-error} is signaled.  If the code is not safe, an error
 may or may not be signaled.
 
-\Defun {first} {cons}
+\Defun {first} {list}
 
 This function is entirely equivalent to the function \texttt{car}.
 
-\Defun {rest} {cons}
+\Defun {rest} {list}
 
 This function is entirely equivalent to the function \texttt{cdr}.
 
