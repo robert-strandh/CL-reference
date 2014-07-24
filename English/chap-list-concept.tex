@@ -42,3 +42,9 @@ linked by their \texttt{cdr} fields.  What is contained in the
   contains a reference to a \texttt{cons} cell that precedes it in the
   sequence. 
 \end{itemize}
+
+In many situations where a proper list is required as argument to some
+function, the \cl{} standard does not oblige the implementation to
+check whether the function was given a dotted list or a circular
+list.  As a result, some functions in some implementations may go into
+an infinite computation when given a circular list.
