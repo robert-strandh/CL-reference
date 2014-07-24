@@ -1,0 +1,23 @@
+\chapter{Lists}
+
+In this chapter, we present operators on \emph{lists}, whether
+\emph{proper}, \emph{dotted}, or \emph{circular}.  
+
+\Defun {cadr} {list}
+
+This function returns the \emph{second} element of \textit{list}.  It
+is equivalent to the composition of the function \texttt{car} and the
+function \texttt{cdr}.  
+
+It follows that if \textit{list} is \texttt{nil} or if \textit{list}
+is a \texttt{cons} cell with \texttt{nil} in its \texttt{cdr} field,
+then this function returns \texttt{nil}.  
+
+If this function is given an \emph{atom} other than \texttt{nil}, or
+if it is given a \texttt{cons} cell with an atom other than
+\texttt{nil} in its \texttt{cdr} field then the result depends on
+whether the code is \emph{safe} or \emph{unsafe}.  If the code is
+\emph{safe}, an error of type \texttt{type-error} is signaled.  If the
+code is \emph{safe}, the implementation is \emph{unsafe}, an error may
+or may not be signaled.  If an error is not signaled, the consequences
+are undefined. 
