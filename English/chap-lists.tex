@@ -126,3 +126,19 @@ If the code is \emph{safe}, an error of type \texttt{type-error} is
 signaled.  If the code is \emph{unsafe}, an error may or may not be
 signaled.  If an error is not signaled, the consequences are
 undefined.
+
+
+\Defun {ninth} {list}
+
+This function returns the \emph{ninth} element of \textit{list}.
+
+If \textit{list} is a \emph{proper list} with fewer than nine
+elements, this function returns \texttt{nil}.
+
+If this function is given an \emph{atom} other than \texttt{nil} or a
+\emph{dotted list} with fewer than nine \texttt{cons} cells, then the
+result depends on whether the code is \emph{safe} or \emph{unsafe}.
+If the code is \emph{safe}, an error of type \texttt{type-error} is
+signaled.  If the code is \emph{unsafe}, an error may or may not be
+signaled.  If an error is not signaled, the consequences are
+undefined.
