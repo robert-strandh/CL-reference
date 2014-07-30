@@ -177,3 +177,32 @@ second argument, then the result depends on whether the code is
 type \texttt{type-error} is signaled.  If the code is \emph{unsafe},
 an error may or may not be signaled.  If an error is not signaled, the
 consequences are undefined.
+
+\Defun {nthcdr} {n list}
+
+This function returns the result of applying the function \texttt{cdr}
+\textit{n} times to \textit{list}.
+
+If this function is given something other than a non-negative integer
+as its first argument, then the result depends on whether the code is
+\emph{safe} or \emph{unsafe}.  If the code is \emph{safe}, an error of
+type \texttt{type-error} is signaled.  If the code is \emph{unsafe},
+an error may or may not be signaled.  If an error is not signaled, the
+consequences are undefined.
+
+If this function is given a \emph{dotted list} with fewer than
+\textit{n} \texttt{cons} cells as its second argument, then the result
+depends on whether the code is \emph{safe} or \emph{unsafe}.  If the
+code is \emph{safe}, an error of type \texttt{type-error} is signaled.
+If the code is \emph{unsafe}, an error may or may not be signaled.  If
+an error is not signaled, the consequences are undefined.
+
+If this function is given an \emph{atom} other than \texttt{nil} as
+its second argument, then the consequences are undefined.  In other
+words, even if the code is \emph{safe}, a conforming implementation
+may not signal an error in this case.  The reason for this exception
+is that the page in the \hs{} defining this function does not mention
+an explicit action to be taken when the second argument is not of type
+\texttt{list}.  Section 1.4.4.3 of the \hs{} then clearly states that
+the consequences are undefined.
+
