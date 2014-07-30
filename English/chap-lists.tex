@@ -157,3 +157,23 @@ If the code is \emph{safe}, an error of type \texttt{type-error} is
 signaled.  If the code is \emph{unsafe}, an error may or may not be
 signaled.  If an error is not signaled, the consequences are
 undefined.
+
+\Defun {nth} {n list}
+
+This function returns element number \textit{n} of \textit{list},
+where the first element of the list is element number $0$.
+
+If this fucntion is given something other than a non-negative integer
+as its first argument, then the result depends on whether the code is
+\emph{safe} or \emph{unsafe}.  If the code is \emph{safe}, an error of
+type \texttt{type-error} is signaled.  If the code is \emph{unsafe},
+an error may or may not be signaled.  If an error is not signaled, the
+consequences are undefined.
+
+If this function is given an \emph{atom} other than \texttt{nil} or a
+\emph{dotted list} with at most \textit{n} \texttt{cons} cells as its
+second argument, then the result depends on whether the code is
+\emph{safe} or \emph{unsafe}.  If the code is \emph{safe}, an error of
+type \texttt{type-error} is signaled.  If the code is \emph{unsafe},
+an error may or may not be signaled.  If an error is not signaled, the
+consequences are undefined.
