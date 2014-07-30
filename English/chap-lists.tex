@@ -206,3 +206,14 @@ an explicit action to be taken when the second argument is not of type
 \texttt{list}.  Section 1.4.4.3 of the \hs{} then clearly states that
 the consequences are undefined.
 
+\Defun {copy-list} {list}
+
+This function returns a \emph{copy} of the list \textit{list}.  Only
+the \texttt{cons} cells of the list are copied.  The elements of the
+copy are the same as those of the original list, including the
+contents of the \texttt{cdr} field of the last \texttt{cons} cell of
+the list. 
+
+The argument \textit{list} must be a \emph{proper list} or a
+\emph{dotted list}.  The consequences are undefined if the argument is
+either a \emph{circular list} or an atom other than \texttt{nil}. 
