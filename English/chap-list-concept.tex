@@ -1,7 +1,7 @@
 \chapter{The concept of a list}
 \label{chap-list-concept}
 
-In \cl{}, the word \emph{list} is used very broadly as a structure
+In \commonlisp{}, the word \emph{list} is used very broadly as a structure
 made up of \texttt{cons} cells.%
 \footnote{The name \texttt{cons} is also the name of the function for
   creating \texttt{cons} cells, and it is an abbreviation of the word
@@ -27,7 +27,7 @@ More specifically, a \emph{list} is a sequence of \texttt{cons} cells,
 linked by their \texttt{cdr} fields.  What is contained in the
 \texttt{car} field is of no importance for the list itself.
 
-\cl{} distinguishes between three basic types of lists:
+\commonlisp{} distinguishes between three basic types of lists:
 
 \begin{itemize}
 \item \emph{Proper} lists.  A list is a proper list when the last
@@ -35,7 +35,7 @@ linked by their \texttt{cdr} fields.  What is contained in the
   in its \texttt{cdr} field. 
 \item \emph{Dotted} lists.  A list is a dotted list when the last
   \texttt{cons} cell in the sequence contains an \emph{atom}
-  in its \texttt{cdr} field.  An atom is any \cl{} object other than a
+  in its \texttt{cdr} field.  An atom is any \commonlisp{} object other than a
   \texttt{cons} cell.
 \item \emph{Circular} lists.  A list is a circular list when the
   \texttt{cdr} field of some \texttt{cons} cell in the sequence
@@ -44,7 +44,7 @@ linked by their \texttt{cdr} fields.  What is contained in the
 \end{itemize}
 
 In many situations where a proper list is required as argument to some
-function, the \cl{} standard does not oblige the implementation to
+function, the \commonlisp{} standard does not oblige the implementation to
 check whether the function was given a dotted list or a circular
 list.  As a result, some functions in some implementations may go into
 an infinite computation when given a circular list.
