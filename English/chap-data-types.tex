@@ -65,3 +65,26 @@ of expressing, such as:
 
 The price to pay for this kind of power is that the \commonlisp{} type
 system is not \emph{decidable} in general.
+
+\section{Overview of standard data types}
+\label{sec-overview-of-standard-data-types}
+
+\subsection{Atoms and lists}
+\label{sec-atoms-and-lists}
+
+It is common to hear people who know very little about \commonlisp{}
+denigrate the language because, as everybody knows, the only data
+types that the language defines are \emph{atoms} and \emph{lists}. 
+
+These people are perfectly right that these are the only two data
+types in the language, except that what they most often do not know is
+that \texttt{atom} is the name of the union of all \commonlisp{} types
+except the type named \texttt{cons}.  As such, the data type
+\texttt{atom} includes objects such as symbols, arrays, streams, class
+instances, classes, packages, structures, etc.
+
+The reason for using this fact to reject \commonlisp{} very likely
+originates in very early versions of LISP%
+\footnote{Notice the spelling of LISP with all capital letters.} in
+which the type named \texttt{atom} only contained very simple
+objects such as \emph{symbols} and \emph{numbers}.
