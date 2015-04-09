@@ -30,3 +30,38 @@ many cases, the standard allows for ``the consequences to be
 undefined'' when there is a violation of the type of an object that is
 passed as an argument to a standard operator.  A program that allows
 for such a situation is, however, non conforming.
+
+\section{Type system}
+\label{sec-type-system}
+
+Contrary to statically-typed languages, \commonlisp{} has a type
+system that is both trivial in some respects, and very sophisticated
+in other respects.
+
+The type system is trivial because a type is defined to be a
+\emph{possibly infinite set of objects}.  The languages allows for
+various ways to specify such sets, including:
+
+\begin{itemize}
+\item enumerating individual objects,
+\item giving ranges of real numbers,
+\item supplying the name of a \emph{class},
+\item indicating types of contained objects for objects such as
+  \texttt{cons} cells and arrays,
+\item naming a \emph{characteristic function} for the set,
+\item using set operations with other sets as arguments.
+\end{itemize}
+
+At the same time, the type system is very sophisticated, because it
+allows the programmer to specify types that most languages have no way
+of expressing, such as:
+
+\begin{itemize}
+\item all integers except 0,
+\item all primes,
+\item any object that is either a number or a person,
+\item any object that is not a football.
+\end{itemize}
+
+The price to pay for this kind of power is that the \commonlisp{} type
+system is not \emph{decidable} in general.
