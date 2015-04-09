@@ -1,2 +1,32 @@
 \chapter{Data types}
 \label{chap-data-types}
+
+\section{\commonlisp{} is dynamically typed}
+
+\commonlisp{} is a \emph{dynamically-typed language}, by which we mean
+that every \emph{object} that is manipulated by some program in the
+language carries with it associated information about its \emph{type},
+and that in the general case, a \emph{variable} in \commonlisp{} can
+hold an object of any type, and even objects of different type at
+different times during program execution.  Dynamic typing is the
+opposite of \emph{static typing} in which the type of an object is
+known only because the \emph{type of variables that have that object
+  as a value} is known at \emph{compile time}.  In the case of static
+typing, the compiler must acquire this type information either by
+explicit type declarations or by a process known as \emph{type
+  inference}.
+
+The contrast between static typing and dynamic typing should not be
+confused with the contrast between \emph{strong typing} and \emph{weak
+  typing}.  A language is \emph{strongly typed} if it is impossible to
+write a program that mistakenly interprets an object of one type as
+being an object of a different type.  Conversely, a \emph{weakly
+  typed} language is one where such type confusion is possible.
+
+While the \commonlisp{} standard allows for implementation to be
+weakly typed, most implementations are strongly typed, at least when
+the \texttt{safety} level is high.  Weak typing occurs because, in
+many cases, the standard allows for ``the consequences to be
+undefined'' when there is a violation of the type of an object that is
+passed as an argument to a standard operator.  A program that allows
+for such a situation is, however, non conforming.
