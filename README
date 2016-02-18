@@ -8,12 +8,17 @@ It differs from the Common Lisp HyperSpec in the following ways:
     exceptional, undefined, and unspecified behavior. 
 
   * The contents is in the public domain (in places where such a
-    status is possible), which means that it uses a different
-    structure and different phrases compared to the HyperSpec. 
+    status is possible).
 
   * It has more cross references, annotations, and remarks. 
 
   * It has a better index. 
+
+Although the HyperSpec is protected by copyright, it is largely based
+on the contents of the draft ANSI standard, and the draft ANSI
+standard is in the public domain.  It is therefore fine for this
+reference manual to contain material from the draft ANSI standard, as
+long as the source of the material is credited.
 
 We are using LaTeX in order for the printed result to be as nice as
 possible.  At the same time, we attempt to use a limited number of
