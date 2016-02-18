@@ -1,0 +1,30 @@
+\chapter{Trees}
+\label{chap-trees}
+
+When \texttt{cons} cells are used to build more complex structures
+than lists, the resulting structure is often called a \emph{tree}.
+Then a list or an individual \texttt{cons} cell becomes a special case
+of a tree.
+
+In this chapter, we present functions that are meant to work on trees
+other than lists and individual \texttt{cons} cells.
+
+Several functions in this chapter are described in terms of
+combinations of the simpler functions \texttt{car} and \texttt{cdr}.
+These two functions are described in detail in
+\refChap{chap-basic-cons-functions}.  In particular, recall that these
+two functions return \texttt{nil} when given \texttt{nil} as an
+argument, and that if they are given neither \texttt{nil} nor a
+\texttt{cons} cell, then an error may or may not be signaled,
+depending on whether the code is \emph{safe}.  See
+\refChap{chap-basic-cons-functions} for details.
+
+\Defun {caar} {tree}
+
+The call (\texttt{caar} \textit{tree}) is equivalent to the call
+(\texttt{car} (\texttt{car} \textit{tree})).
+
+\Defun {cdar} {tree}
+
+The call (\texttt{cdar} \textit{tree}) is equivalent to the call
+(\texttt{cdr} (\texttt{car} \textit{tree})).
