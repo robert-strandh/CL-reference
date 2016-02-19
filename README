@@ -25,6 +25,11 @@ possible.  At the same time, we attempt to use a limited number of
 semantic macros so that the source can be parsed and turned into a
 variety of formats, e.g., HTML.
 
+Figures are made using some tool that can produce "FIG" files, such as
+Xfig.  To turn them into PDF files, we use the fig2dev program, which
+must therefore be installed before the final PDF file can be built.
+You can install fig2dev as part of the transfig package.
+
 The only way this reference manual is ever going to be finished is if
 many different people help out.  In that respect, it can be viewed as
 an experiment to see whether such collaboration is possible. 
