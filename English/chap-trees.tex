@@ -62,7 +62,7 @@ The call (\texttt{cddar} \textit{tree}) is equivalent to the call
 
 \Defun {caaaar} {tree}
 
-The call (\texttt{caaar} \textit{tree}) is equivalent to the call
+The call (\texttt{caaaar} \textit{tree}) is equivalent to the call
 (\texttt{car} (\texttt{car} (\texttt{car} (\texttt{car}
 \textit{tree})))).
 
@@ -82,4 +82,10 @@ The call (\texttt{caadar} \textit{tree}) is equivalent to the call
 
 The call (\texttt{caaddr} \textit{tree}) is equivalent to the call
 (\texttt{car} (\texttt{car} (\texttt{cdr} (\texttt{cdr}
+\textit{tree})))).
+
+\Defun {cadaar} {tree}
+
+The call (\texttt{cadaar} \textit{tree}) is equivalent to the call
+(\texttt{car} (\texttt{cdr} (\texttt{car} (\texttt{car}
 \textit{tree})))).
