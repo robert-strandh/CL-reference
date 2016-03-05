@@ -143,3 +143,20 @@ The call (\texttt{cddadr} \textit{tree}) is equivalent to the call
 The call (\texttt{cdddar} \textit{tree}) is equivalent to the call
 (\texttt{cdr} (\texttt{cdr} (\texttt{cdr} (\texttt{car}
 \textit{tree})))).
+
+\Defun {copy-tree} {tree}
+
+Return a copy of the tree \textit{tree}.
+
+The semantics of \texttt{copy-tree} are as if it were defined like
+this:
+
+\begin{verbatim}
+(defun copy-tree (tree)
+  (if (atom tree)
+      tree
+      (cons (copy-tree (car tree)) (copy-tree (cdr tree)))))
+\end{verbatim}
+
+In particular, no attempt is made to detect circularity or to preserve
+sharing of substructure.
