@@ -165,3 +165,37 @@ sharing of substructure.
 
 Return a generalized Boolean value indicating whether \textit{tree-1}
 is equal to \textit{tree-2}.
+
+The keyword arguments \textit{test} and \textit{test-not} determine
+whether two \emph{atoms} in the tree are equal.  By default, the value
+of \textit{test} is \texttt{eql} and \textit{test-not} is absent.
+
+If a value for either \textit{test} or for \textit{test-not} is given,
+then it must be a designator for a function of two arguments that
+returns a generalized Boolean.  The first argument supplied to the
+function will be an atom from \textit{tree-1} and the second argument
+supplied will be an atom from \textit{tree-2}.  If \textit{test} was
+supplied, the two atoms are considered to be equal if and only if the
+test returns a \emph{true} value.  If \textit{test-not} was supplied,
+the two atoms are considered to be equal if and only if the test
+returns \emph{false} (i.e., \texttt{nil}).
+
+The consequences are unspecified if values are supplied both for
+\textit{test} and for \textit{test-not}.  Most implementations will
+probably signal an error.
+
+Recall that a designator for a function is either a function or a
+symbol.  If it is a symbol, the function denoted is the function named
+by that symbol in the global environment.  The consequences are
+undefined if a symbol is used as a function designator, but that
+symbol does not name a function in the global environment.
+
+The consequences are undefined if both \textit{tree-1} and
+\textit{tree-2} have circular structures in them.  If only one of them
+has circular structure in it, then the result is well defined, because
+then ultimately an atom of the non-circular tree will be tested
+against some object in the circular tree.  If that atom is tested
+against an atom in the circular tree, the result is determined by the
+\textit{test} or the \textit{test-not} argument.  If, on the other
+hand, that atom is tested against a \texttt{cons} cell in the circular
+tree, the result is always \emph{false}.
