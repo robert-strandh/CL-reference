@@ -13,6 +13,13 @@ This function returns a \emph{true} value if and only if
 \textit{object} is a \texttt{cons} cell.  Otherwise, it returns
 \emph{false} (i.e., \texttt{nil}).
 
+\Defun {atom} {object}
+
+This function returns a \emph{true} value if and only if
+\textit{object} is an \emph{atom}.  Otherwise, it returns \emph{false}
+(i.e., \texttt{nil}).  Recall that an object is an atom if and only if
+it is not a \texttt{cons} cell.
+
 \Defun {car} {list}
 
 This function takes either the symbol \texttt{nil} \emph{or} a
