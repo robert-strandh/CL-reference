@@ -7,6 +7,12 @@ This function takes two arbitrary \lisp{} objects and returns a
 \texttt{cons} cell with those objects in the \texttt{car} field and
 the \texttt{cdr} field respectively.
 
+\Defun {consp} {object}
+
+This function returns a \emph{true} value if and only if
+\textit{object} is a \texttt{cons} cell.  Otherwise, it returns
+\emph{false} (i.e., \texttt{nil}).
+
 \Defun {car} {list}
 
 This function takes either the symbol \texttt{nil} \emph{or} a
